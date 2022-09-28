@@ -1,0 +1,1 @@
+exports.JWT_KEY = "String longa para criptografar o token";

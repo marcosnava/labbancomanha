@@ -7,6 +7,9 @@ const Usuario = require('./model/usuario');
 const Tipo = require('./model/tipo');
 const Figurinha = require('./model/figurinha');
 
+// Routes import
+const usuarioRoutes = require('./routes/usuarioRoutes');
+
 const app = express();
 
 // Environment Setup
@@ -37,5 +40,8 @@ app.use((req, res, next) => {
   );
   next();
 });
+
+// Routes
+app.use('/api/usuario', usuarioRoutes);
 
 module.exports = app;
