@@ -9,6 +9,8 @@ const Figurinha = require('./model/figurinha');
 
 // Routes import
 const usuarioRoutes = require('./routes/usuarioRoutes');
+const tipoRoutes = require('./routes/tipoRoutes');
+const figurinhaRoutes = require('./routes/figurinhaRoutes');
 
 const app = express();
 
@@ -43,5 +45,7 @@ app.use((req, res, next) => {
 
 // Routes
 app.use('/api/usuario', usuarioRoutes);
+app.use('/api/tipo', tipoRoutes);
+app.use('/api/figurinha', figurinhaRoutes);
 
 module.exports = app;
